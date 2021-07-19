@@ -21,6 +21,8 @@
 		C93D8449269DE4F200A5C553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93D8447269DE4F200A5C553 /* LaunchScreen.storyboard */; };
 		C93D845B269E176F00A5C553 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93D845A269E176F00A5C553 /* SecondTableViewController.swift */; };
 		C94680B8269EE49C0004FD62 /* DevicesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94680B7269EE49C0004FD62 /* DevicesData.swift */; };
+		C970881926A58C7100E34460 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C970881826A58C7100E34460 /* HeaderView.swift */; };
+		C970881B26A58C8B00E34460 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C970881A26A58C8B00E34460 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		C93D844A269DE4F200A5C553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C93D845A269E176F00A5C553 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		C94680B7269EE49C0004FD62 /* DevicesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesData.swift; sourceTree = "<group>"; };
+		C970881826A58C7100E34460 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		C970881A26A58C8B00E34460 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				C927A46126A0D05100214F4A /* CustomTableViewCell.swift */,
 				C927A46926A0DB2100214F4A /* DetailsViewController.swift */,
 				C927A46D26A1440700214F4A /* ImagePickerManager.swift */,
+				C970881826A58C7100E34460 /* HeaderView.swift */,
+				C970881A26A58C8B00E34460 /* HeaderView.xib */,
 				C927A46A26A0DB2100214F4A /* DetailsViewController.xib */,
 				C927A46226A0D05100214F4A /* CustomTableViewCell.xib */,
 				C93D8442269DE4F100A5C553 /* Main.storyboard */,
@@ -151,6 +157,7 @@
 				C93D8449269DE4F200A5C553 /* LaunchScreen.storyboard in Resources */,
 				C93D8446269DE4F200A5C553 /* Assets.xcassets in Resources */,
 				C927A46C26A0DB2100214F4A /* DetailsViewController.xib in Resources */,
+				C970881B26A58C8B00E34460 /* HeaderView.xib in Resources */,
 				C93D8444269DE4F100A5C553 /* Main.storyboard in Resources */,
 				C927A46426A0D05100214F4A /* CustomTableViewCell.xib in Resources */,
 			);
@@ -168,6 +175,7 @@
 				C93D843D269DE4F100A5C553 /* AppDelegate.swift in Sources */,
 				C927A46326A0D05100214F4A /* CustomTableViewCell.swift in Sources */,
 				C927A46B26A0DB2100214F4A /* DetailsViewController.swift in Sources */,
+				C970881926A58C7100E34460 /* HeaderView.swift in Sources */,
 				C94680B8269EE49C0004FD62 /* DevicesData.swift in Sources */,
 				C927A46E26A1440700214F4A /* ImagePickerManager.swift in Sources */,
 				C93D845B269E176F00A5C553 /* SecondTableViewController.swift in Sources */,

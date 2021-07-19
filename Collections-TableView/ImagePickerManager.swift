@@ -17,15 +17,15 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
     
     override init(){
         super.init()
-        let cameraAction = UIAlertAction(title: "Camera", style: .default){
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) {
             UIAlertAction in
             self.openCamera()
         }
-        let galleryAction = UIAlertAction(title: "Gallery", style: .default){
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default) {
             UIAlertAction in
             self.openGallery()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) {
             UIAlertAction in
         }
         

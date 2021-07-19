@@ -16,30 +16,12 @@ class FirstTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Apple Devices"
-        tableView.dataSource = self
-        tableView.delegate = self
         allDevices = iPad.getAlliPads() + iPhone.getAlliPhones()
         tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
     }
 }
 
 extension FirstTableViewController {
-        
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = deleteAction(at: indexPath)
-        
-        return UISwipeActionsConfiguration(actions: [delete])
-    }
-    
-    func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "Delete") { action, view, completion in
-            self.allDevices.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
-        action.backgroundColor = .red
-        
-        return action
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let device = allDevices[indexPath.row]
@@ -47,9 +29,13 @@ extension FirstTableViewController {
         let detailsViewController = DetailsViewController(nibName: detailsViewControllerName, bundle: nil)
         detailsViewController.passedDevice = device
         
-//        detailsViewController.didPassToList = { passDevice in
-//        тут был возврат, но его съели волки
-//        }
+        detailsViewController.didPassToList = { passDevice in
+            guard let newDevice = passDevice else {
+                return
+            }
+            self.allDevices[indexPath.row] = newDevice
+            tableView.reloadData()
+        }
         
         self.navigationController?.pushViewController(detailsViewController, animated: true)        
     }
