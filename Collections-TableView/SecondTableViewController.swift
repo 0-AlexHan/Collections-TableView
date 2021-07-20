@@ -17,6 +17,7 @@ class SecondTableViewController: UITableViewController {
     private let cellID = String(describing: CustomTableViewCell.self)
     private let headerID = String(describing: HeaderView.self)
     private var savedDeviceToGetType: DevicesData?
+    private var addNewDeviceToSection: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,14 @@ extension SecondTableViewController: HeaderViewDelegate {
         let detailsViewControllerName = String(describing: DetailsViewController.self)
         let detailsViewController = DetailsViewController(nibName: detailsViewControllerName, bundle: nil)
         detailsViewController.devicesType = savedDeviceToGetType
+        detailsViewController.didPassToList = { passNewDeviceToList in
+            guard let newDevice = passNewDeviceToList else {
+                return
+            }
+            self.allDevices[self.addNewDeviceToSection].devicesArray.append( newDevice)
+            
+            self.tableView.reloadData()
+        }
         self.navigationController?.pushViewController(detailsViewController, animated: true)
     }
     
@@ -85,7 +94,6 @@ extension SecondTableViewController: HeaderViewDelegate {
         }
         headerView.view.backgroundColor = .lightGray
         headerView.delegate = self
-        
         let expandableSection = UIButton(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
         
         expandableSection.backgroundColor = .lightGray
@@ -99,6 +107,7 @@ extension SecondTableViewController: HeaderViewDelegate {
             return expandableSection
         }
         savedDeviceToGetType = first
+        addNewDeviceToSection = section
         
         expandableSection.setTitle(String(describing: type(of: first).self), for: .normal)
 

@@ -19,6 +19,7 @@ class HeaderView: UITableViewHeaderFooterView {
     @IBOutlet weak var view: UIView!
     
     @IBAction func addItem(_ sender: Any) {
+        addButton.tag = 0
         self.delegate?.add(item: self.deviceType)
     }
     

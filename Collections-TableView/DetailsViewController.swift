@@ -28,7 +28,7 @@ class DetailsViewController: UIViewController {
         defaultDevice = devicesType
         defaultDevice?.image = defaultImage
         defaultDevice?.info = "Type device info"
-        defaultDevice?.title =  "Default"
+        defaultDevice?.title =  devicesType?.title.components(separatedBy: " ").first ?? "Default Name"
         if let device = passedDevice {
             setUpDetails(device: device)
         } else {
@@ -40,7 +40,7 @@ class DetailsViewController: UIViewController {
         
         textView.delegate = self
         
-        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Edit",
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Add Device Image",
                                                               style: .plain,
                                                               target: self,
                                                               action: #selector(addDidTap)),
