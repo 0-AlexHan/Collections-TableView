@@ -20,14 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TS7-Pm-ewo">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TS7-Pm-ewo">
                     <rect key="frame" x="132" y="98" width="150" height="150"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="13K-Q0-vJR"/>
+                        <constraint firstAttribute="height" constant="150" id="48X-ez-pdi"/>
+                    </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dH4-mk-r2y">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dH4-mk-r2y">
                     <rect key="frame" x="87" y="343" width="240" height="210"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="210" id="Zva-gX-C55"/>
+                        <constraint firstAttribute="width" constant="240" id="iRK-qv-WrD"/>
+                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="9"/>
@@ -37,6 +43,12 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TS7-Pm-ewo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="54" id="F88-ag-8B4"/>
+                <constraint firstItem="TS7-Pm-ewo" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IWn-OR-Zn9"/>
+                <constraint firstItem="dH4-mk-r2y" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Mxe-IQ-2e3"/>
+                <constraint firstItem="dH4-mk-r2y" firstAttribute="top" secondItem="TS7-Pm-ewo" secondAttribute="bottom" constant="95" id="WAI-m6-2j1"/>
+            </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="90.401785714285708"/>
         </view>
     </objects>
